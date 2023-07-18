@@ -9,11 +9,6 @@ app = Flask(__name__)
 app.register_blueprint(app_views)
 
 
-@app.route('/api/v1/status')
-def run():
-    return "Hello World"
-
-
 @app.errorhandler(404)
 def not_found(error):
     """ json 404 page """
